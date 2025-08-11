@@ -83,11 +83,9 @@ This is my **personal hub repository**: it summarizes the project, links all the
 }
 
 
-Sample Output
+**Sample Output**
+```json
 
-json
-Copy
-Edit
 {
   "user_id": "123",
   "matches": [
@@ -99,31 +97,35 @@ Edit
     }
   ]
 }
-📚 Documentation
-Vibrations Presentation (PDF)
 
-Repository Structure & Links (PDF)
 
-Final Project Report (PDF)
+## 📚 Documentation
+- **[Vibrations Presentation (PDF)](./docs/Vibrations%20Presentation.pdf)**  
+  - Project overview, motivation, and demo screenshots.
+- **[Repository Structure & Links (PDF)](./docs/Vibrations%20Repository.pdf)**  
+  - Mapping of all repositories and how they connect.
+- **[Final Project Report (PDF)](./docs/Vibrations_Final_Project_report.pdf)**  
+  - Detailed architecture, implementation details, challenges, and future scope.
 
-🗺 Future Work
+---
+
+## 🗺 Future Work
 From the final report:
-
-Chat/messaging feature
-
-UI redesign
-
-Stronger security (CIS-aligned NGINX)
-
-Custom domains & HTTPS
-
-Two-factor authentication
-
-Email validation
-
-Persistent “likes” and profile editing
-
-Mobile app version
-
-Spotify app upgrade to extended quota mode
-
+- **Chat/messaging feature**  
+  - Enable real-time conversations between matched users.
+- **UI redesign**  
+  - Improve usability, responsiveness, and visual appeal.
+- **Stronger security (CIS-aligned NGINX)**  
+  - Harden NGINX configurations for production readiness.
+- **Custom domains & HTTPS**  
+  - Replace Elastic Beanstalk default domains with branded, secure ones.
+- **Two-factor authentication**  
+  - Add an extra layer of login security.
+- **Email validation**  
+  - Verify user email addresses before activation.
+- **Persistent “likes” and profile editing**  
+  - Allow users to save matches and update profiles post-registration.
+- **Mobile app version**  
+  - Develop native mobile apps for iOS and Android.
+- **Spotify app upgrade to extended quota mode**  
+  - Expand Spotify API access beyond development mode for more users.
