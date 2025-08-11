@@ -80,7 +80,8 @@ This is my **personal hub repository**: it summarizes the project, links all the
     "top_genres": ["pop", "indie"]
   },
   "location": {"lat": 38.8048, "lon": -77.0469}
-}
+}```
+
 **Sample Output**
 ```json
 {
@@ -93,7 +94,8 @@ This is my **personal hub repository**: it summarizes the project, links all the
       "distance_km": 6.4
     }
   ]
-}
+}```
+
 ---
 ## 📚 Documentation
 - **[Vibrations Presentation (PDF)](./docs/Vibrations%20Presentation.pdf)**  
