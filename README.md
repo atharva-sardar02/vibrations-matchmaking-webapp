@@ -96,20 +96,29 @@ This is my **personal hub repository**: it summarizes the project, links all the
 }
 
 📚 Documentation
-
 Vibrations Presentation (PDF)
+
 Repository Structure & Links (PDF)
+
 Final Project Report (PDF)
 
 🗺 Future Work
 From the final report:
 
 Chat/messaging feature
+
 UI redesign
+
 Stronger security (CIS-aligned NGINX)
+
 Custom domains & HTTPS
+
 Two-factor authentication
+
 Email validation
+
 Persistent “likes” and profile editing
+
 Mobile app version
+
 Spotify app upgrade to extended quota mode
