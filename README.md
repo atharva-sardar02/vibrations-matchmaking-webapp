@@ -85,7 +85,6 @@ This is my **personal hub repository**: it summarizes the project, links all the
 
 **Sample Output**
 ```json
-
 {
   "user_id": "123",
   "matches": [
@@ -97,7 +96,6 @@ This is my **personal hub repository**: it summarizes the project, links all the
     }
   ]
 }
-
 
 ## 📚 Documentation
 - **[Vibrations Presentation (PDF)](./docs/Vibrations%20Presentation.pdf)**  
