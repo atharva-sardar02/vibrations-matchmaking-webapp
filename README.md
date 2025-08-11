@@ -22,72 +22,55 @@ This is my **personal hub repository**: it summarizes the project, links all the
 
 ## 🧱 Architecture (High-Level)
 
-```mermaid
-graph TD;
-  User-->UI[React SPA (NGINX)];
-  UI-->API[Spring Boot REST API];
-  API-->Auth[Cognito];
-  API-->DB[RDS];
-  API--invoke-->Lambda[Matchmaking Algorithm (Python)];
-  UI-->S3[S3 (Profile Images)];
+![System Architecture](./assets/architecture.png)
 
-Frontend: React app served via NGINX on AWS Elastic Beanstalk
+**Key components:**
+- **Frontend:** React app served via **NGINX** on AWS Elastic Beanstalk  
+- **Backend:** Spring Boot REST API on AWS Elastic Beanstalk  
+- **Matchmaking:** Python algorithm deployed on **AWS Lambda**, invoked by backend  
+- **Auth & Storage:** AWS Cognito (auth), AWS S3 (images), AWS RDS (PostgreSQL/MySQL)  
+- **External API:** Spotify Web API for music data retrieval
 
-Backend: Spring Boot REST API on AWS Elastic Beanstalk
+---
 
-Matchmaking: Python algorithm deployed on AWS Lambda, invoked by backend
+## 💡 My Role
 
-Auth & Storage: AWS Cognito (auth), AWS S3 (images), AWS RDS (PostgreSQL/MySQL)
+**Main focus:**
+- Designed and implemented the **Matchmaking Algorithm**  
+  - Scored matches based on overlap in artists, songs, and genres  
+  - Applied geolocation filtering using haversine distance formula  
+  - Tunable weighting for different similarity metrics
+- **Deployed algorithm on AWS Lambda**  
+  - Packaged Python handler, configured IAM roles and environment variables  
+  - Integrated Lambda invocation into Spring Boot backend
 
-💡 My Role
-Main focus:
+**Active contributions:**
+- **React Frontend Development**  
+  - Built match display components and UI elements for results  
+  - Integrated frontend with backend matchmaking API  
+  - Worked on CORS configuration and NGINX deployment
+- **Spotify API Integration**  
+  - Helped implement Spotify OAuth flow  
+  - Assisted in fetching and mapping user music data into profile schema
 
-Designed and implemented the Matchmaking Algorithm
+---
 
-Scored matches based on overlap in artists, songs, and genres
+## 🔗 Related Team Repositories (VTCS5704-Team1)
+- [Frontend (React)](https://github.com/VTCS5704-Team1/vibrations-front-end)  
+- [Backend (Spring Boot)](https://github.com/VTCS5704-Team1/vibrations-back-end)  
+- [Matchmaking (AWS Lambda)](https://github.com/VTCS5704-Team1/vibrations-matchmaking)  
+- [NGINX Config](https://github.com/VTCS5704-Team1/nginx)  
+- [Team Organization Home](https://github.com/VTCS5704-Team1)  
 
-Applied geolocation filtering using haversine distance formula
+> Note: Cloud instances (Elastic Beanstalk) may be offline now to avoid costs.  
+> Local run instructions are in the frontend/backend READMEs.
 
-Tunable weighting for different similarity metrics
+---
 
-Deployed algorithm on AWS Lambda
+## 🧮 Matchmaking Algorithm (AWS Lambda) — Example Interface
 
-Packaged Python handler, configured IAM roles and environment variables
-
-Integrated Lambda invocation into Spring Boot backend
-
-Active contributions:
-
-React Frontend Development
-
-Built match display components and UI elements for results
-
-Integrated frontend with backend matchmaking API
-
-Worked on CORS configuration and NGINX deployment
-
-Spotify API Integration
-
-Helped implement Spotify OAuth flow
-
-Assisted in fetching and mapping user music data into profile schema
-
-🔗 Related Team Repositories (VTCS5704-Team1)
-Frontend (React)
-
-Backend (Spring Boot)
-
-Matchmaking (AWS Lambda)
-
-NGINX Config
-
-Team Organization Home
-
-Note: Cloud instances (Elastic Beanstalk) may be offline now to avoid costs.
-Local run instructions are in the frontend/backend READMEs.
-
-🧮 Matchmaking Algorithm (AWS Lambda) — Example Interface
-
+**Sample Input**
+```json
 {
   "user_id": "123",
   "radius_km": 25,
@@ -98,6 +81,7 @@ Local run instructions are in the frontend/backend READMEs.
   },
   "location": {"lat": 38.8048, "lon": -77.0469}
 }
+
 
 {
   "user_id": "123",
@@ -112,29 +96,20 @@ Local run instructions are in the frontend/backend READMEs.
 }
 
 📚 Documentation
+
 Vibrations Presentation (PDF)
-
 Repository Structure & Links (PDF)
-
 Final Project Report (PDF)
 
 🗺 Future Work
 From the final report:
 
 Chat/messaging feature
-
 UI redesign
-
 Stronger security (CIS-aligned NGINX)
-
 Custom domains & HTTPS
-
 Two-factor authentication
-
 Email validation
-
 Persistent “likes” and profile editing
-
 Mobile app version
-
 Spotify app upgrade to extended quota mode
