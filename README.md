@@ -81,8 +81,6 @@ This is my **personal hub repository**: it summarizes the project, links all the
   },
   "location": {"lat": 38.8048, "lon": -77.0469}
 }
-
-
 **Sample Output**
 ```json
 {
@@ -96,7 +94,7 @@ This is my **personal hub repository**: it summarizes the project, links all the
     }
   ]
 }
-
+---
 ## 📚 Documentation
 - **[Vibrations Presentation (PDF)](./docs/Vibrations%20Presentation.pdf)**  
   - Project overview, motivation, and demo screenshots.
