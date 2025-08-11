@@ -83,6 +83,11 @@ This is my **personal hub repository**: it summarizes the project, links all the
 }
 
 
+Sample Output
+
+json
+Copy
+Edit
 {
   "user_id": "123",
   "matches": [
@@ -94,7 +99,6 @@ This is my **personal hub repository**: it summarizes the project, links all the
     }
   ]
 }
-
 📚 Documentation
 Vibrations Presentation (PDF)
 
@@ -122,3 +126,4 @@ Persistent “likes” and profile editing
 Mobile app version
 
 Spotify app upgrade to extended quota mode
+
