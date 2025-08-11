@@ -30,6 +30,7 @@ graph TD;
   API-->DB[RDS];
   API--invoke-->Lambda[Matchmaking Algorithm (Python)];
   UI-->S3[S3 (Profile Images)];
+
 Frontend: React app served via NGINX on AWS Elastic Beanstalk
 
 Backend: Spring Boot REST API on AWS Elastic Beanstalk
@@ -86,11 +87,7 @@ Note: Cloud instances (Elastic Beanstalk) may be offline now to avoid costs.
 Local run instructions are in the frontend/backend READMEs.
 
 🧮 Matchmaking Algorithm (AWS Lambda) — Example Interface
-Sample Input
 
-json
-Copy
-Edit
 {
   "user_id": "123",
   "radius_km": 25,
@@ -101,11 +98,7 @@ Edit
   },
   "location": {"lat": 38.8048, "lon": -77.0469}
 }
-Sample Output
 
-json
-Copy
-Edit
 {
   "user_id": "123",
   "matches": [
@@ -117,6 +110,7 @@ Edit
     }
   ]
 }
+
 📚 Documentation
 Vibrations Presentation (PDF)
 
@@ -144,6 +138,3 @@ Persistent “likes” and profile editing
 Mobile app version
 
 Spotify app upgrade to extended quota mode
-
-🏷 Topics
-aws lambda spring-boot react cognito s3 rds nginx spotify-api recommender-system clustering
